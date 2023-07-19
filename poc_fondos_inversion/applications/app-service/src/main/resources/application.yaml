@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "fondos_inversion"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include: null
+graphql:
+  servlet:
+    enabled: true
+    mapping: "/graphql"
+  playground:
+    mapping: "/playground"
+    endpoint: "/graphql"
+    enabled: true
