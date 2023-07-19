@@ -1,0 +1,13 @@
+dependencies {
+    implementation project(':usecase')
+    implementation project(':model')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    {{#metrics}}
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+    {{/metrics}}
+{{#include-swagger}}
+    implementation 'io.springfox:springfox-boot-starter:{{springfoxVersion}}'
+    implementation 'io.springfox:springfox-swagger-ui:{{springfoxVersion}}'
+{{/include-swagger}}
+}
